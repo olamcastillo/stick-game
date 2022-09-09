@@ -106,7 +106,6 @@ body, html {
   text-align: center;
   display: flex;
   justify-content: space-between;
-  
 
 }
 .save , .cancel {
@@ -125,6 +124,67 @@ body, html {
 }
 
 .cancel {
+  color: var(--bg-color);
+  background-color: var(--text-color);
+}
+
+/* third page */
+
+.third {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.third-buttons , .draw {
+  width: 45vw;
+}
+
+.letters {
+    width: 40%;
+}
+
+.draw {
+  height: 40%;
+  background-color: var(--bg-color);
+}
+
+.letters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 2rem;
+  justify-content: space-evenly;
+}
+
+.letter {
+  border-bottom: 3px solid var(--bg-color);
+  font-weight: bold;
+}
+
+.third-buttons {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.new-game , .end-game {
+  width: 49%;
+  height: 60px;
+  margin: 0;
+  font-size: 1rem;
+  border-radius: 14px;
+  border: 1px solid;
+}
+
+.new-game {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.end-game {
   color: var(--bg-color);
   background-color: var(--text-color);
 }

@@ -1,0 +1,64 @@
+/* variables */
+:root {
+  --bg-color: #252830;
+  --text-color: white; 
+  }
+
+
+body, html {
+  color: var(--bg-color);
+  background-color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  font-family:'Lucida Sans', Verdana, sans-serif ;
+  transition: color 300ms, background-color 300ms;
+  /* filter: invert(1) hue-rotate(180deg); */
+}
+
+/* .dark {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+} */
+
+.logo {
+  position: absolute;
+  margin: 0;
+  left: 50px;
+  top: 40px;
+}
+
+.theme {
+  position: absolute;
+  right: 50px;
+  top: 40px;
+  filter: invert(14%) sepia(7%) saturate(1253%) hue-rotate(186deg) brightness(91%) contrast(93%);
+  /* filter: invert(100%) sepia(0%) saturate(7487%) hue-rotate(359deg) brightness(102%) contrast(105%) */
+}
+
+.first {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
+
+.first-buttons {
+  width: 200px;
+  height: 60px;
+  margin: 8px;
+  font-size: 1rem;
+  border-radius: 14px;
+  border: 1px solid;
+  
+}
+
+.start {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.add {
+  color: var(--bg-color)
+  ;
+}

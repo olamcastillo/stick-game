@@ -10,6 +10,7 @@ const start = document.getElementById('start');
 const add = document.getElementById('add');
 const save = document.getElementById('save');
 const textarea = document.querySelector('textarea');
+const noLetters = document.getElementById('no-letters');
 
 
 let ctx = canvas.getContext('2d');
@@ -63,7 +64,7 @@ const evalLetter = (e) => {
     if(selectedWord.includes( e )) {
         correctLetter( e );
     }else {
-        wrongLetter();
+        wrongLetter( e );
     }
 }
 
@@ -90,7 +91,11 @@ const correctLetter = ( e ) => {
     }
 }
 
-const wrongLetter = () => {
+const wrongLetter = ( e ) => {
+    const noLetter = document.createElement('p');
+    noLetter.innerHTML = e;
+    noLetter.classList.add('no-letter');
+    noLetters.appendChild(noLetter)
     addBody(body[fails]);
     fails++;
     if(fails === body.length) {

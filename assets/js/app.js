@@ -110,7 +110,7 @@ const wrongLetter = ( e ) => {
             }
         )
         newGame.style.opacity = 1;
-
+    noLetters.innerText = '';
     }
 }
 

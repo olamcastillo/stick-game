@@ -232,3 +232,52 @@ body, html {
 .hidden {
   display: none;
 }
+
+/* Responsive */
+/*Tablets*/  
+@media (min-width: 376px) and (max-width: 768px){
+  html {
+      height: 100vh;
+      width: 100%;
+  }
+  
+  .first div, .second div, .third div {
+    width: 60vw;
+  }
+
+  .third .draw {
+    margin-top: 15%;
+  }
+}
+
+/*Mobile*/
+@media (max-width: 375px) {
+  html {
+      height: 100vh;
+      width: 100%;
+  }
+  .first div, .second div, .third div {
+    width: 80vw;  
+  }
+
+  .second-buttons, .third-buttons {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6rem;
+    height: 140px;
+  }
+
+  .second-buttons button, .third-buttons button {
+    width: 90%;
+    margin-top: .6rem;
+  }
+  .third .draw {
+    margin-top: 35%;
+
+  }
+  .notice {
+
+    margin-top: 13vh;
+  }
+  
+}

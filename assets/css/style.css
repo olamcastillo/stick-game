@@ -72,6 +72,7 @@ body, html {
   align-items: center;
   justify-content: space-evenly;
   height: 100vh;
+  display: none;
   
 }
 
@@ -108,7 +109,7 @@ body, html {
   justify-content: space-between;
 
 }
-.save , .cancel {
+.save , .second-back {
   width: 49%;
   height: 60px;
   margin: 0;
@@ -123,7 +124,7 @@ body, html {
   color: var(--text-color);
 }
 
-.cancel {
+.second-back {
   color: var(--bg-color);
   background-color: var(--text-color);
 }
@@ -136,6 +137,7 @@ body, html {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  display: none;
 }
 
 .third-buttons , .draw {
@@ -144,11 +146,15 @@ body, html {
 
 .letters {
     width: 40%;
+    min-height: 60px;
 }
 
 .draw {
   height: 40%;
   background-color: var(--bg-color);
+  text-align: center;
+  display: flex;
+  border-radius: 14px;
 }
 
 .letters {
@@ -170,7 +176,7 @@ body, html {
   justify-content: space-between;
 }
 
-.new-game , .end-game {
+.new-game , .third-back {
   width: 49%;
   height: 60px;
   margin: 0;
@@ -184,7 +190,17 @@ body, html {
   color: var(--text-color);
 }
 
-.end-game {
+.third-back {
   color: var(--bg-color);
   background-color: var(--text-color);
+}
+
+.canvas {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.hidden {
+  display: none;
 }

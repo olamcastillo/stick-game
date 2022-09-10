@@ -16,46 +16,46 @@
   </div>
   <!-- First Section -->
 
-  <!-- <section class="first">
-    <button class="start first-buttons">Start Game</button>
-    <button class="add first-buttons">Add Word</button>
-  </section> -->
+  <section class="first" id="first">
+    <button class="start first-buttons" id="start">Start Game</button>
+    <button class="add first-buttons" id="add">Add Word</button>
+  </section>
 
   <!-- Second Section -->
 
-  <!-- <section class="second">
+  <section class="second" id="second">
     <textarea cols="30" rows="10" class="textarea" placeholder="Enter a word"></textarea>
     <div class="notice">
       <i class="material-icons">new_releases</i>
       <p>Only lowercase letters and no accents</p>
     </div>
     <div class="second-buttons">
-      <button class="save">Save and Start</button>
-      <button class="cancel">Cancel</button> 
-    </div>
-  </section> -->
-
-  <!-- Third Section -->
-
-  <section class="third">
-    <div class="draw"></div>
-    <div class="letters">
-      <p class="letter">H</p>
-      <p class="letter">O</p>
-      <p class="letter">L</p>
-      <p class="letter">A</p>
-      
-    </div>
-    <div class="third-buttons">
-      <button class="new-game">New Game</button>
-      <button class="end-game">End Game</button> 
+      <button class="save" id="save">Save and Start</button>
+      <button class="second-back" id='second-back'>Back</button> 
     </div>
   </section>
 
+  <!-- Third Section -->
 
+  <section class="third" id="third">
+    
+    <div class="draw">
+    <!--  Canvas -->
+    <canvas class="canvas" id="canvas">
+    </canvas>
 
+    </div>
 
+    <div class="letters" id="letters">
+      
+    </div>
+    <div class="third-buttons">
+      <button class="new-game" id="new-game">New Game</button>
+      <button class="third-back" id="third-back">Back</button> 
+    </div>
+  </section>
 
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="/assets/js/app.js"></script>
 </body>
 </html>

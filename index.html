@@ -4,15 +4,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;600&family=Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
   <title>Ahorcado</title>
   
 </head>
-<body>
+<body class="body">
   <div class="nav">
     <h1 class="logo">Olam</h1>
-    <img class="theme" src="assets/icons/sun.png">
   </div>
   <!-- First Section -->
 
@@ -27,7 +29,7 @@
     <textarea cols="30" rows="10" class="textarea" placeholder="Enter a word"></textarea>
     <div class="notice">
       <i class="material-icons">new_releases</i>
-      <p>Only lowercase letters and no accents</p>
+      <p>Only words with a maximum of 8 letters</p>
     </div>
     <div class="second-buttons">
       <button class="save" id="save">Save and Start</button>
@@ -41,6 +43,7 @@
     
     <div class="draw">
     <!--  Canvas -->
+
     <canvas class="canvas" id="canvas">
     </canvas>
 
@@ -52,6 +55,10 @@
     <div class="third-buttons">
       <button class="new-game" id="new-game">New Game</button>
       <button class="third-back" id="third-back">Back</button> 
+    </div>
+    <div class="hint">
+      <i class="material-icons">notifications</i>
+      <p>Discover the programming language</p>
     </div>
   </section>
 

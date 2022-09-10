@@ -27,7 +27,7 @@ const body = [
 ]
 
 const words = [
-    'JAVA', 'HTML', 'CSS', 'PYTHON', 'FRONTEND'
+    'JAVA', 'PHP', 'CSS', 'PYTHON', 'GOLANG', 'SOLANA' 
 ]
 
 
@@ -69,12 +69,10 @@ const evalLetter = (e) => {
 
 const correctLetter = ( e ) => {
     const { children } = letters;
-    console.log( { children } );
     for(let i = 0; i < children.length; i++) {
-        if(children[i].innerHTML === e) {
+        if(children[i].innerHTML === e && children[i].classList.value == 'letter hidden') {
             children[i].classList.toggle('hidden');
             hits++;
-            console.log(hits);
         }
     }
     if(hits === selectedWord.length) {
@@ -88,6 +86,7 @@ const correctLetter = ( e ) => {
                 color: 'white'
             }
         )
+        newGame.style.opacity = 1;
     }
 }
 
@@ -105,6 +104,8 @@ const wrongLetter = () => {
                 color: 'white'
             }
         )
+        newGame.style.opacity = 1;
+
     }
 }
 
@@ -135,7 +136,7 @@ const setNewGame = () => {
     fails = 0;
     hits = 0;
     newGame.disabled = true;
-    newGame.style.opacity = .9
+    newGame.style.opacity = .8
     letters.innerText = ''
     drawMan();
     randomWord();
@@ -155,6 +156,13 @@ const continuePage = () => {
 }
 start.addEventListener('click', continuePage);
 
+// Go menu
+const goMenu = () => {
+    secondSection.style.display = 'none';
+    firstSection.style.display = 'flex';
+}
+secondBack.addEventListener('click', goMenu);
+
 // Go back from second page
 const addWord = () => {
     secondSection.style.display = 'flex';
@@ -164,11 +172,11 @@ add.addEventListener('click', addWord);
 
 //Save word and Start
 const saveWord = () => {
-    if(textarea.value.split('').length > 8) {
+    if(textarea.value.split('').length > 8 || textarea.value == '') {
         Swal.fire(
             { 
                 title: 'Error!',
-                text: `The word has more than 8 letters`,
+                text: `Read the indications`,
                 icon: 'error',
                 background: '#212534',
                 color: 'white'
@@ -178,6 +186,7 @@ const saveWord = () => {
         words.push(textarea.value.toUpperCase());
         secondSection.style.display = 'none';
         thirdSection.style.display = 'flex';
+
 
     }
     console.log(words);

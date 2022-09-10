@@ -204,6 +204,20 @@ save.addEventListener('click', saveWord);
 const thBack = () => {
     thirdSection.style.display = 'none';
     firstSection.style.display = 'flex';
+    document.removeEventListener('keydown', verifyLetter);
+    newGame.disabled = false;
+    newGame.style.opacity = 1;
+    letters.innerText = '';
+    noLetters.innerText = '';
+    usedLetters = [];
+    fails = 0;
+    hits = 0;
+    drawMan();
+    randomWord();
+    drawWord();
+
+
+
 }
 
 thirdBack.addEventListener('click', thBack);
